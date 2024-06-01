@@ -7,10 +7,20 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(express.json());
-app.use(express.urlencoded());
 app.use(cors());
-app.use(express.static(path.join(__dirname, './dist')));
+// app.use(express.static(path.join(__dirname, './dist')));
+
+
+
+
+app.use('/dist', express.static(path.join(__dirname, 'dist')));
+
+// Handle other routes
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
+});
+
+
 
 app.get('/getjoke', (req, res) => {
     let getRandomJoke = oneLinerJoke.getRandomJoke({
