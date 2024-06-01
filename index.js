@@ -8,18 +8,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors());
-// app.use(express.static(path.join(__dirname, './dist')));
-
-
-
-
-app.use('/dist', express.static(path.join(__dirname, 'dist')));
-
-// Handle other routes
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
-});
-
+app.use(express.static(path.join(__dirname, 'dist')));
 
 
 app.get('/getjoke', (req, res) => {
