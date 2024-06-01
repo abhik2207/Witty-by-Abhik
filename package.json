@@ -1,0 +1,21 @@
+{
+  "name": "witty",
+  "version": "1.0.0",
+  "description": "A one liner jokes application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Abhik Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.2",
+    "one-liner-joke": "^1.2.2"
+  }
+}
