@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, './dist')));
 
 app.get('/getjoke', (req, res) => {
     let getRandomJoke = oneLinerJoke.getRandomJoke({
